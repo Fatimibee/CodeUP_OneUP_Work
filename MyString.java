@@ -14,16 +14,16 @@ class MyString {
 
 
     // 1. Append function
-    public String append_func(String append_str){
-        String result=this.value+""+append_str;
+    public String append_Func(String append_str){
+        String result = this.value +" "+ append_str;
         return result;
     }
 
 
     // 2. count words function
     public int count(){
-       int result=1;
-       for(int i=0;i<this.value.length();i++){
+       int result = 1;
+       for(int i = 0 ;i < this.value.length() ; i++){
         if (this.value.charAt(i) == ' ') {
                 result++;
            }
@@ -33,10 +33,10 @@ class MyString {
 
 
     // 3. replace function
-    public void replace_func( char oldChar, char newChar){
-         for(int i=0;i<this.value.length();i++){
-            if(this.value.charAt(i)==oldChar){
-                this.value=this.value.substring(0,i)+newChar+this.value.substring(i+1,this.value.length());
+    public void replace_Func( char oldChar, char newChar){
+         for(int i = 0 ; i < this.value.length() ; i++){
+            if(this.value.charAt(i) == oldChar){
+                this.value = this.value.substring(0,i)+newChar+this.value.substring(i+1,this.value.length());
             }
          }
          
@@ -44,7 +44,7 @@ class MyString {
 
 
     // 4. chk is string palindrom or not
-    public boolean is_palindrom(){
+    public boolean is_Palindrom(){
         String str=this.value;
         int i = 0;
         int j = str.length() - 1;
@@ -62,37 +62,37 @@ class MyString {
 
 
     // 5. splice function
-    public String splice_func(int start, int length){
-       if(start<0 || start>=this.value.length()  || length<0 || start+length>this.value.length()){
+    public String splice_Func(int start, int length){
+       if(start < 0 || start >= this.value.length()  || length < 0 || start + length > this.value.length()){
         return this.value;
        }
-       String res=this.value.substring(0,start)+this.value.substring(start+length,this.value.length());
-       return res;
+       String result = this.value.substring(0 , start) + this.value.substring(start + length , this.value.length());
+       return result;
     }
 
 
     // 6. split function
-    public void split_func(String pattern){
+    public void split_Func(String pattern){
         String str=this.value;
         ArrayList<String> words = new ArrayList<>();
-        String ans="";
+        String answer = "";
         for(int i=0;i<str.length(); ){
             // check if the pattern matches at the current position (supports multi-char pattern)
             if(pattern != null && pattern.length() > 0 && i + pattern.length() <= str.length()
                && str.substring(i, i + pattern.length()).equals(pattern)){
-                if(!ans.isEmpty()){
-                    words.add(ans);
-                    ans="";
+                if(!answer.isEmpty()){
+                    words.add(answer);
+                    answer = "";
                 }
                 i += pattern.length();
             } else {
-                ans += str.charAt(i);
+                answer += str.charAt(i);
                 i++;
             }
         }
 
-        if(!ans.isEmpty()){
-            words.add(ans);
+        if(!answer.isEmpty()){
+            words.add(answer);
         }
 
         System.out.println("Result after splitting :");
@@ -104,13 +104,13 @@ class MyString {
 
 
     // 7. max repeating char function
-    public void  max_repeating_char(){
-        int[] count=new int[256];
-        String str=this.value;
-        for(int i=0;i<str.length();i++){
+    public void  get_Max_Repeating_Char(){
+        int[] count = new int[256];
+        String str = this.value;
+        for(int i = 0 ; i < str.length() ; i++){
             count[str.charAt(i)]++;
         }
-        int max=0;
+        int max = 0;
         char result = ' ';
         for (int i = 0; i < 256; i++) {
             if (count[i] > max) {
@@ -124,7 +124,7 @@ class MyString {
 
 
     // 8. sort function
-    public String sort_func() {
+    public String sort_Func() {
         String str=this.value;
         
     char[] arr = str.toCharArray(); 
@@ -144,24 +144,24 @@ class MyString {
 
 
     // 9. shift function
-    public String shift_func(int n){
-        String str=this.value;
-    n= n % str.length();
-    if(n==0) {
+    public String shift_Func(int n){
+    String str=this.value;
+    n = n % str.length();
+    if(n == 0) {
        
         return str ;
     }
-    String result=str.substring(str.length()-n,str.length())+str.substring(0,str.length()-n);
+    String result = str.substring(str.length() - n , str.length()) + str.substring(0 , str.length() - n);
     return result;
     }
 
 
     // 10. reverse function
-    public String reverse_func(){
-        String str=this.value;
-        String result="";
-        for(int i=str.length()-1;i>=0;i--){
-            result+=str.charAt(i);
+    public String reverse_Func(){
+        String str = this.value;
+        String result = "";
+        for(int i = str.length()-1 ; i >= 0 ; i--){
+            result += str.charAt(i);
         }
 
         return result;

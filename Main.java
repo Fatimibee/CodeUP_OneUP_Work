@@ -10,13 +10,13 @@ import java.util.*;
 public class Main {
 
       public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
+        Scanner scannerObj=new Scanner(System.in);
 
         // String input
         System.out.println("Enter a String:");
-        String str=sc.nextLine();
+        String str=scannerObj.nextLine();
         
-        MyString s=new MyString(str);
+        MyString objMyString=new MyString(str);
         
 
         // menu
@@ -25,9 +25,9 @@ public class Main {
         
         // choice enter
         System.out.println("Enter your choice:");
-        int choice=sc.nextInt();
+        int choice=scannerObj.nextInt();
 
-        sc.nextLine();
+        scannerObj.nextLine();
 
 
         // calling function based on user choice
@@ -36,35 +36,35 @@ public class Main {
             // append choice
             case 1:
                 System.out.println("Enter a string to append:");
-                String append_str=sc.nextLine();
-                String ans=s.append_func(append_str);
-                System.out.println("Result after appending : " +ans);
+                String append_str = scannerObj.nextLine();
+                String ans = objMyString.append_Func(append_str);
+                System.out.println("Result after appending : " + ans);
                 break;
 
 
             // count word choice
             case 2:
-                int words=s.count();
-                System.out.println("Number of words in String : "+words);
+                int words = objMyString.count();
+                System.out.println("Number of words in String : " + words);
                 break;
 
 
             // replace choice
             case 3:
                System.out.println("Enter old character: ");
-               char oldChar=sc.next().charAt(0);
+               char oldChar = scannerObj.next().charAt(0);
 
                System.out.println("Enter new character: ");
-               char newChar=sc.next().charAt(0);
+               char newChar = scannerObj.next().charAt(0);
 
-                s.replace_func(oldChar, newChar);
-                System.out.println("Result after replacing :"+s.value);
+                objMyString.replace_Func(oldChar, newChar);
+                System.out.println("Result after replacing : " + objMyString.value);
                 break;
 
 
             // is palindrom choice
             case 4:
-            boolean isPal = s.is_palindrom();
+            boolean isPal = objMyString.is_Palindrom();
                 if(isPal){
                     System.out.println("String is palindrom");
                 }
@@ -77,50 +77,50 @@ public class Main {
             // spice choice
             case 5:
                 System.out.println("Enter start index: ");
-                int start=sc.nextInt();
+                int start = scannerObj.nextInt();
 
                 System.out.println("Enter length of splice : ");
-                int length=sc.nextInt();
+                int length = scannerObj.nextInt();
 
-                String spliced=s.splice_func(start,length);
-                System.out.println("Result after splicing : "+spliced);
+                String spliced = objMyString.splice_Func(start,length);
+                System.out.println("Result after splicing : " + spliced);
                 break;
 
 
             // split choice
             case 6:
             System.out.println("Enter pattern to split:");
-            String Pattern_str = sc.nextLine();
-            s.split_func(Pattern_str);
+            String Pattern_str = scannerObj.nextLine();
+            objMyString.split_Func(Pattern_str);
             break;
 
 
             // max repeating char choice
             case 7:
-                s.max_repeating_char();
+                objMyString.get_Max_Repeating_Char();
                 break;
 
 
             // sort choice
             case 8:
-                String Sorted=s.sort_func();
-                System.out.println("Result after sorting : "+Sorted);
+                String sorted = objMyString.sort_Func();
+                System.out.println("Result after sorting : " + sorted);
                 break;
 
 
             // shift choice
             case 9:
                System.out.println("Enter number of elements to shift at end: ");
-               int n=sc.nextInt();
-               String shifted=s.shift_func(n);
-               System.out.println("Result after shifting : "+shifted);
+               int n = scannerObj.nextInt();
+               String shifted = objMyString.shift_Func(n);
+               System.out.println("Result after shifting : " + shifted);
                 break;
 
 
             // reverse choice
             case 10:
-                String reversed=s.reverse_func();
-                System.out.println("Result after reversing : "+reversed);
+                String reversed = objMyString.reverse_Func();
+                System.out.println("Result after reversing : " + reversed);
                 break;
 
 
@@ -135,7 +135,7 @@ public class Main {
                  System.out.println("You entered invalid choice");
                  break;
         }
-        sc.close();
+        scannerObj.close();
 
     }
 };
