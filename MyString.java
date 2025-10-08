@@ -72,23 +72,27 @@ class MyString {
 
 
     // 6. split function
-    public void  split_func(){
+    public void split_func(String pattern){
         String str=this.value;
         ArrayList<String> words = new ArrayList<>();
         String ans="";
-        for(int i=0;i<str.length();i++){
-            if(str.charAt(i)==' '){
+        for(int i=0;i<str.length(); ){
+            // check if the pattern matches at the current position (supports multi-char pattern)
+            if(pattern != null && pattern.length() > 0 && i + pattern.length() <= str.length()
+               && str.substring(i, i + pattern.length()).equals(pattern)){
                 if(!ans.isEmpty()){
-                words.add(ans);
-                ans="";
+                    words.add(ans);
+                    ans="";
                 }
+                i += pattern.length();
+            } else {
+                ans += str.charAt(i);
+                i++;
             }
-
-            ans+=str.charAt(i);
         }
 
         if(!ans.isEmpty()){
-        words.add(ans);
+            words.add(ans);
         }
 
         System.out.println("Result after splitting :");

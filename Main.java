@@ -89,8 +89,10 @@ public class Main {
 
             // split choice
             case 6:
-                s.split_func();
-                break;
+            System.out.println("Enter pattern to split:");
+            String Pattern_str = sc.nextLine();
+            s.split_func(Pattern_str);
+            break;
 
 
             // max repeating char choice
