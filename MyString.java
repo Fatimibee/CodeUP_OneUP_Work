@@ -14,7 +14,7 @@ class MyString {
 
 
     // 1. Append function
-    public String append_Func(String append_str){
+    public String appendFunc(String append_str){
         String result = this.value +" "+ append_str ;
         return result ;
     }
@@ -33,7 +33,7 @@ class MyString {
 
 
     // 3. replace function
-    public void replace_Func( char oldChar, char newChar){
+    public void replaceFunc( char oldChar, char newChar){
          for(int i = 0 ; i < this.value.length() ; i++){
             if(this.value.charAt(i) == oldChar){
                 this.value = this.value.substring(0,i)+newChar+this.value.substring(i+1,this.value.length()) ;
@@ -44,7 +44,7 @@ class MyString {
 
 
     // 4. chk is string palindrom or not
-    public boolean is_Palindrom(){
+    public boolean isPalindrom(){
         String str=this.value ;
         int i = 0 ;
         int j = str.length() - 1 ;
@@ -62,7 +62,7 @@ class MyString {
 
 
     // 5. splice function
-    public String splice_Func(int start, int length){
+    public String spliceFunc(int start, int length){
        if(start < 0 || start >= this.value.length()  || length < 0 || start + length > this.value.length()){
         return this.value ;
        }
@@ -72,7 +72,7 @@ class MyString {
 
 
     // 6. split function
-    public void split_Func(String pattern){
+    public void splitFunc(String pattern){
         String str=this.value ;
         ArrayList<String> words = new ArrayList<>();
         String answer = "" ;
@@ -104,7 +104,7 @@ class MyString {
 
 
     // 7. max repeating char function
-    public void  get_Max_Repeating_Char(){
+    public void  getMaxRepeatingChar(){
         int[] count = new int[256] ;
         String str = this.value ;
         for(int i = 0 ; i < str.length() ; i++){
@@ -124,7 +124,7 @@ class MyString {
 
 
     // 8. sort function
-    public String sort_Func() {
+    public String sortFunc() {
         String str=this.value ;
         
     char[] arr = str.toCharArray() ; 
@@ -144,7 +144,7 @@ class MyString {
 
 
     // 9. shift function
-    public String shift_Func(int n){
+    public String shiftFunc(int n){
     String str=this.value ;
     n = n % str.length() ;
     if(n == 0) {
@@ -157,7 +157,7 @@ class MyString {
 
 
     // 10. reverse function
-    public String reverse_Func(){
+    public String reverseFunc(){
         String str = this.value ;
         String result = "" ;
         for(int i = str.length()-1 ; i >= 0 ; i--){
