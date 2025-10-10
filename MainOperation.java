@@ -2,7 +2,7 @@
  * @filename - Main.java
  * @description - This is the main file which contains the main function 
  * and a menu to call different functions of the MyOperation class.
- * @author - Fatimi Bee (23ESKCS077)
+ * @author - Fatimi Bee
  */
 
 import java.util.*;
