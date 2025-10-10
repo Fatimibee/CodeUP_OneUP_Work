@@ -1,3 +1,11 @@
+/**
+ * @filename - Main.java
+ * @description - This is the  file which contains the all functions
+ * related to string and number operations.
+ * @author - Fatimi Bee (23ESKCS077)
+ */
+
+
 public class MyOperation {
     String value ;
     int number ;
