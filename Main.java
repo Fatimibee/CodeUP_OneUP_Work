@@ -37,7 +37,7 @@ public class Main {
             case 1:
                 System.out.println("Enter a string to append:") ;
                 String append_str = scannerObj.nextLine() ;
-                String ans = objMyString.append_Func(append_str) ;
+                String ans = objMyString.appendFunc(append_str) ;
                 System.out.println("Result after appending : " + ans) ;
                 break ;
 
@@ -57,14 +57,14 @@ public class Main {
                System.out.println("Enter new character: ") ;
                char newChar = scannerObj.next().charAt(0) ;
 
-                objMyString.replace_Func(oldChar, newChar) ;
+                objMyString.replaceFunc(oldChar, newChar) ;
                 System.out.println("Result after replacing : " + objMyString.value) ;
                 break ;
 
 
             // is palindrom choice
             case 4:
-            boolean isPal = objMyString.is_Palindrom() ;
+            boolean isPal = objMyString.isPalindrom() ;
                 if(isPal){
                     System.out.println("String is palindrom") ;
                 }
@@ -82,7 +82,7 @@ public class Main {
                 System.out.println("Enter length of splice : ") ;
                 int length = scannerObj.nextInt() ;
 
-                String spliced = objMyString.splice_Func(start,length) ;
+                String spliced = objMyString.spliceFunc(start,length) ;
                 System.out.println("Result after splicing : " + spliced) ;
                 break ;
 
@@ -91,19 +91,19 @@ public class Main {
             case 6:
             System.out.println("Enter pattern to split:") ;
             String Pattern_Str = scannerObj.nextLine() ;
-            objMyString.split_Func(Pattern_Str) ;
+            objMyString.splitFunc(Pattern_Str) ;
             break ;
 
 
             // max repeating char choice
             case 7:
-                objMyString.get_Max_Repeating_Char() ;
+                objMyString.getMaxRepeatingChar() ;
                 break ;
 
 
             // sort choice
             case 8:
-                String sorted = objMyString.sort_Func() ;
+                String sorted = objMyString.sortFunc() ;
                 System.out.println("Result after sorting : " + sorted) ;
                 break ;
 
@@ -112,14 +112,14 @@ public class Main {
             case 9:
                System.out.println("Enter number of elements to shift at end: ") ;
                int n = scannerObj.nextInt() ;
-               String shifted = objMyString.shift_Func(n) ;
+               String shifted = objMyString.shiftFunc(n) ;
                System.out.println("Result after shifting : " + shifted) ;
                 break ;
 
 
             // reverse choice
             case 10:
-                String reversed = objMyString.reverse_Func() ;
+                String reversed = objMyString.reverseFunc() ;
                 System.out.println("Result after reversing : " + reversed) ;
                 break ;
 
